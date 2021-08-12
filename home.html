@@ -9,54 +9,44 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <!-- sidebar -->
-  <div id="leftSidebar" class="sidebar">
-    <div class="header-sidebar">
-      <a href="javascript:void(0)" class="closeBtn" onclick="closeSidebar()"><img src="./img/closeBtn.png" alt="" style="width: 25px;"></a>
-      <a href="javascript:void(0)" class="iconSearchBtn" onclick="openSearch()"><img src="./img/icon-search-white.png" style="width: 25px;" alt=""></a>
-    </div>
-    <ul class="sidebar-list">
-      <li class="sidebar-item">
-        <a href="javascript:void(0)" class="dropdown-collection-link">Koleksi <img class="dropdown-arrow-collection rotate" src="./img/icon_dropdown_white.png" alt=""> </a>
-        <ul class="sidebar-sublist-collection">
-          <li class="sidebar-subitem">
-            <a href="#sejarah">Sejarah</a>
-          </li>
-          <li class="sidebar-subitem">
-            <a href="#koleksikhusus">Koleksi Khusus</a>
-          </li>
-        </ul>
-      </li>
-      <li class="sidebar-item">
-        <a href="javascript:void(0)" class="dropdown-blog-link">Blog <img class="dropdown-arrow-blog" src="./img/icon_dropdown_white.png" alt=""> </a>
-        <ul class="sidebar-sublist-blog">
-          <li class="sidebar-subitem">
-            <a href="#kegiatan">Kegiatan</a>
-          </li>
-          <li class="sidebar-subitem">
-            <a href="#sorotan">Sorotan</a>
-          </li>
-          <li class="sidebar-subitem">
-            <a href="#terbitan">Terbitan</a>
-          </li>
-        </ul>
-      </li>
-      <li class="sidebar-item">
-        <a href="#tentang" class="sidebar-link">Tentang</a>
-      </li>
-      <br>
-      <li class="sidebar-item">
-        <a href="#kontak" class="sidebar-link">Kontak</a>
-      </li>
-      <li class="sidebar-item">
-        <a href="#menjadianggota" class="sidebar-link">Menjadi Anggota</a>
-      </li>
-    </ul>
-  </div>
-
   <!-- header -->
   <header class="header">
     <a href="index.html"><img src="./img/CIVAS.png" class="img-header" alt=""></a>
+    <div class="center-menu">
+      <ul>
+        <li class="tab-menu">
+          <a href="#koleksi">Koleksi</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="#sejarah">Sejarah</a>
+            </li>
+            <li>
+              <a href="#khusus">Koleksi Khusus</a>
+            </li>
+          </ul>
+        </li>
+        <li class="tab-menu">
+          <a href="#blog">Blog</a>
+          <ul class="sub-menu">
+            <li>
+              <a href="#kegiatan">Kegiatan</a>
+            </li>
+            <li>
+              <a href="#sorotan">Sorotan</a>
+            </li>
+            <li>
+              <a href="#terbitan">Terbitan</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#tentang">Tentang</a>
+        </li>
+        <li>
+          <a href="#kontak">Kontak</a>
+        </li>
+      </ul>
+    </div>
     <div class="right-menu">
       <div class="lang">
         <a href="#id">ID</a>
@@ -76,26 +66,38 @@
           </div>
           <!-- popup user body -->
           <div class="popup-user-body">
-            <ul>
-              <li>
-                Name        : Fulan bin Fulan
-              </li>
-              <li>
-                Role        : Member
-              </li>
-              <li>
-                Affiliation : Galeri Soemardja
-              </li>
-              <li>
-                Status      : Dosen
-              </li>
-              <li>
-                Address     : Bandung
-              </li>
-              <li>
-                Phone       : 0821-000
-              </li>
-            </ul>
+            <table>
+              <tr>
+                <td>Name</td>
+                <td>:</td>
+                <td>Fulan bin Fulan</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>:</td>
+                <td>Member</td>
+              </tr>
+              <tr>
+                <td>Affiliation</td>
+                <td>:</td>
+                <td>Galeri Soemardja</td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td>:</td>
+                <td>Dosen</td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>:</td>
+                <td>Bandung</td>
+              </tr>
+              <tr>
+                <td>Phone</td>
+                <td>:</td>
+                <td>0821-000</td>
+              </tr>
+            </table>
           </div>
           <!-- popup user footer -->
           <div class="popup-user-footer">
@@ -107,25 +109,17 @@
       </div>
     </div>
   </header>
-  <span onclick="openSidebar()" style="padding: 50px; cursor: pointer;"><img style="width: 30px;" src="./img/icon-navbar.png" alt=""></span>
   
   <!-- content -->
   <div class="content">
-    <select name="category" id="mainCategory">
-      <option value="all" selected hidden>Semua Kategori</option>
-      <option value="name">Nama</option>
-      <option value="title">Judul</option>
-      <option value="year">Tahun</option>
-      <option value="medium">Medium</option>
-    </select>
     <div class="search">
       <form action="#" class="searchForm">
-        <input type="search" placeholder="Cari Arsip....">
+        <input type="search" placeholder="Cari Arsip...">
         <button type="submit"><img src="./img/icon-search.png" style="width: 14px;" alt=""></button>
       </form>
       <br>
       <div class="advanced-search">
-        <a href="./pages/advanced-search.html">Advanced Search</a>
+        <a href="./pages/advanced-search.html">Pencarian Lanjutan</a>
       </div>
     </div>
   </div>
@@ -153,40 +147,47 @@
         </div>
       </div>
       <br>
-      <div class="footer-social">
-        <p style="color: #fff;"><strong>CIVAS</strong> 2021 &copy; All Rights Reserved</p>
-        <ul>
-          <li>
-            <a href="#facebook">Facebook</a>
-          </li>
-          <li>
-            <a href="#youtube">YouTube</a>
-          </li>
-          <li>
-            <a href="#instagram">Instagram</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <!-- footer center -->
-    <div class="footer-center">
-      <img src="./img/alana_logo-01-4-bbb83936e6.png" alt="">
     </div>
     <!-- footer right -->
     <div class="footer-right">
-      <h4 style="font-size: 13px;">Supported By:</h4>
-      <div class="footer-right-content">
-        <img src="./img/ITB.png" class="img-footer" alt="">
-        <div>
+      <div class="footer-right-group">
+        <div class="footer-right-form">
+          <form action="#">
+            <input type="email" id="register" placeholder="Email Address">
+            <button type="button"><img src="./img/arrowSubmit.png" alt=""></button>
+          </form>
+          <p class="register-label">Daftar untuk menerima undangan kegiatan CIVAS</p>
+        </div>
+        <a href="#join">Menjadi Anggota</a>
+      </div>
+      <p>Supported By:</p>
+      <div>
+        <img src="./img/alana_logo-01-4-bbb83936e6.png" alt="">
+        <div class="footer-right-content">
+          <img src="./img/ITB.png" class="img-footer" alt="">
           <ul>
-            <li> <strong>Program Studi Seni Rupa</strong> </li>
-            <li> <strong>Fakultas Seni Rupa dan Desain</strong> </li>
-            <li><strong>Institut Teknologi Bandung</strong> </li>
+            <li> Fakultas Seni Rupa dan Desain</li>
+            <li>Institut Teknologi Bandung </li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
+  <hr>
+  <div class="footer-bottom">
+    <p>CIVAS 2021 &copy; All rights Reserved</p>
+    <ul>
+      <li>
+        <a href="#facebook">Facebook</a>
+      </li>
+      <li>
+        <a href="#youtube">YouTube</a>
+      </li>
+      <li>
+        <a href="#instagram">Instagram</a>
+      </li>
+    </ul>
+  </div>
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script src="./js/main.js"></script>
 </body>

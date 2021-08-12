@@ -56,7 +56,7 @@ header {
 }
 
 .img-header {
-  width: 220px;
+  width: 210px;
 }
 
 .center-menu ul {
@@ -88,6 +88,13 @@ header {
   position: absolute;
 }
 
+.sub-menu li:hover {
+  width: 200px;
+  height: 25px;
+  background-color: #d0d2d3;
+  color: #fff;
+}
+
 .lang {
   text-align: right;
 }
@@ -95,6 +102,7 @@ header {
 .lang a {
   text-decoration: none;
   padding-left: 15px;
+  font-size: 14px;
   color: #676767;
 }
 
@@ -105,6 +113,7 @@ header {
 .auth a {
   text-decoration: none;
   padding-left: 25px;
+  font-size: 14px;
   color: #676767;
 }
 
@@ -320,9 +329,10 @@ header {
 }
 
 /* popup user body */
-.header .right-menu .user .popup-user .popup-user-body ul li {
+.header .right-menu .user .popup-user .popup-user-body table {
   margin: 10px 65px;
   text-align: justify;
+  font-size: 12px;
   list-style: none;
 }
 
@@ -425,7 +435,7 @@ button {
 }
 
 .advanced-search a:hover {
-  background-color: #000;
+  background-color: #d0d2d3;
   color: #fff;
 }
 /* content end */
@@ -464,15 +474,16 @@ footer {
 
 .about-civas {
   display: flex;
+  font-size: 14px;
 }
 
 .about-civas-left p {
-  width: 80%;
+  width: 70%;
 }
 
 .about-civas-right {
   margin-top: 10px;
-  width: 110%;
+  width: 120%;
 }
 
 @media screen and (max-width: 768px) {
@@ -483,44 +494,9 @@ footer {
   }
 }
 
-/* footer center */
-.footer-center {
-  width: 40%;
-}
-
-@media screen and (max-width: 1024px) {
-  .footer-center {
-    width: 250px;
-    text-align: center;
-    display: grid;
-    margin: auto;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .footer-center {
-    width: 250px;
-    text-align: center;
-  }
-}
-
-.footer-center a {
-  margin-left: 80px;
-  border: 1px solid;
-  border-radius: 4px;
-  padding: 10px;
-  text-decoration: none;
-  color: #000;
-}
-
-.footer-center a:hover {
-  background-color: #000;
-  color: #fff;
-}
-
 /* footer right */
 .footer-right {
-  width: 60%;
+  width: 40%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -531,9 +507,17 @@ footer {
   }
 }
 
-.footer-right form input {
+.footer-right .footer-right-group {
+  display: flex;
+}
+
+.footer-right .footer-right-group .footer-right-form {
+  display: grid;
+}
+
+.footer-right-form form input {
   font-family: Archivo, sans-serif;
-  width: 250px;
+  width: 220px;
   height: 30px;
   border: none;
   border-radius: 0;
@@ -542,27 +526,44 @@ footer {
   background: transparent;
 }
 
-.footer-right form {
-  width: 277px;
+.footer-right-form form {
+  width: 250px;
   border-bottom: 1px #000 solid;
 }
 
-.footer-right form:hover {
+.footer-right-form form:hover {
   border-bottom: 2px solid;
 }
 
-.footer-right button img {
+.footer-right-form form button img {
   width: 10px;
   height: 10px;
 }
 
-.footer-right .register-label {
+.footer-right-form .register-label {
   font-size: 12px;
   margin: 0 0 20px 0;
 }
 
+.footer-right .footer-right-group a {
+  width: 180px;
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-right .footer-right-group a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 .footer-right p {
   margin-left: 175px;
+  font-size: 12px;
 }
 
 .footer-right div {
@@ -621,6 +622,11 @@ footer {
 .footer-bottom ul li a {
   font-size: 14px;
   text-decoration: none;
+  color: #676767;
+}
+
+.footer-bottom ul li a:hover {
+  font-weight: bold;
   color: #000;
 }
 /* footer end */
