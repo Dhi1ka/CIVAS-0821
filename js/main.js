@@ -1,3 +1,11 @@
+// mobile navbar menu
+$(function() {
+  $('.btnMenu').on('click', function() {
+    $('.center-menu').slideToggle(500);
+    $('.right-menu').slideToggle(500);
+  });
+});
+
 // modal toggle
 $('.modal-toggle').on('click', function(e) {
   e.preventDefault();

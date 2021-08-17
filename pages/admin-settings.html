@@ -109,16 +109,16 @@
       <div class="content-menu">
         <ul>
           <li>
-            <a href="#profile">Profile</a>
+            <a href="#profile" class="profile">Profile</a>
           </li>
           <li class="content-tab">
             <a href="#user">Manage User</a><button><img src="../img/expandBtn.png" alt=""></button>
             <ul>
               <li>
-                <a href="#search">Search User</a>
+                <a href="#search" class="search">Search User</a>
               </li>
               <li>
-                <a href="#member">Member List</a>
+                <a href="#member" class="member">Member List</a>
               </li>
             </ul>
           </li>
@@ -126,31 +126,33 @@
             <a href="#page">Manage Page</a><button><img src="../img/expandBtn.png" alt=""></button>
             <ul>
               <li>
-                <a href="#request">View User Request</a>
+                <a href="#request" class="request">View User Request</a>
               </li>
               <li>
-                <a href="#status">View Page Status</a>
+                <a href="#status" class="status">View Page Status</a>
               </li>
             </ul>
           </li>
           <li class="content-tab">
             <a href="#monitor">Log Monitor</a><button><img src="../img/expandBtn.png" alt=""></button>
-          </li>
-          <li>
-            <a href="#registration">User Registration</a>
-          </li>
-          <li>
-            <a href="#docs">Downloaded Docs</a>
-          </li>
-          <li>
-            <a href="#artefact">Artefact Status</a>
+            <ul>
+              <li>
+                <a href="#registration" class="registration">User Registration</a>
+              </li>
+              <li>
+                <a href="#docs" class="docs">Downloaded Docs</a>
+              </li>
+              <li>
+                <a href="#artefact" class="artefact">Artefact Status</a>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
     </div>
     <div class="content-right">
       <div class="content-page">
-        <div id="profile">
+        <div id="profile" class="hidden">
           <h5>View Profile</h5>
           <form action="#">
             <input type="text" placeholder="Full Name">
@@ -158,14 +160,16 @@
             <input type="password" placeholder="Password">
             <button type="reset">RESET</button>
             <button type="button">CHANGE PASSWORD</button>
-            <select name="" id="">
-              <option value="">Account Status</option>
+            <select name="account" id="account">
+              <option value="status" hidden>Account Status</option>
+              <option value="activate">Activate Account</option>
+              <option value="deactivate">Deactivate Account</option>
             </select>
             <br>
             <button type="submit">SUBMIT</button>
           </form>
         </div>
-        <div id="search">
+        <div id="search" class="hidden">
           <div>
             <h5>Search User</h5>
             <form action="#">
@@ -188,7 +192,7 @@
             </tr>
           </table>
         </div>
-        <div id="member">
+        <div id="member" class="hidden">
           <h5>Member Privilege</h5>
           <table>
             <tr>
@@ -223,7 +227,7 @@
             </tr>
           </table>
         </div>
-        <div id="request">
+        <div id="request" class="hidden">
           <h5>User Request</h5>
           <table>
             <tr>
@@ -240,7 +244,7 @@
             </tr>
           </table>
         </div>
-        <div id="status">
+        <div id="status" class="hidden">
           <h5>Page Status</h5>
           <table>
             <tr>
@@ -259,16 +263,13 @@
             </tr>
           </table>
         </div>
-        <div id="log">
-          <h5>Log Monitor</h5>
-        </div>
-        <div id="registration">
+        <div id="registration" class="hidden">
           <h5>Log File User Registration</h5>
         </div>
-        <div id="downloaded">
+        <div id="docs" class="hidden">
           <h5>Downloaded Docs</h5>
         </div>
-        <div id="artefact">
+        <div id="artefact" class="hidden">
           <h5>Artefact Status</h5>
         </div>
       </div>

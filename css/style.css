@@ -43,16 +43,13 @@ p, ul, li {
 header {
   width: 100%;
   display: flex;
-  padding: 40px 70px;
+  top: 0;
+  padding: 25px 50px;
   align-items: center;
   justify-content: space-between;
-}
-
-@media screen and (max-width:500px) {
-  header {
-    width: 100%;
-    display: grid;
-  }
+  position: fixed;
+  background-color: #fff;
+  z-index: 999;
 }
 
 .img-header {
@@ -65,8 +62,9 @@ header {
 }
 
 .center-menu ul li {
-  margin-top: 2rem;
+  margin-top: 1.2rem;
   list-style: none;
+  transition: all 0.3s;
 }
 
 .center-menu ul li a {
@@ -84,13 +82,17 @@ header {
 }
 
 .center-menu ul .tab-menu:hover .sub-menu {
-  display: block;
+  display: grid;
   position: absolute;
 }
 
-.sub-menu li:hover {
+.sub-menu li {
   width: 200px;
-  height: 25px;
+}
+
+.sub-menu li:hover {
+  width: 210px;
+  height: 17px;
   background-color: #d0d2d3;
   color: #fff;
 }
@@ -375,6 +377,54 @@ header {
 .header .right-menu .user .popup-user .popup-user-footer a:hover {
   background-color: #0d58b2;
 }
+
+.btnMenu {
+  display: none;
+}
+
+@media screen and (min-width: 1175px) {
+  .center-menu, .right-menu {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 1175px) {
+  header {
+    width: 100%;
+    top: 0;
+    display: flex;
+    margin: auto;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .btnMenu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .center-menu {
+    display: none;
+  }
+
+  .right-menu {
+    display: none;
+  }
+
+  .center-menu ul {
+    display: grid;
+    margin: 60px;
+  }
+
+  .center-menu ul li {
+    transition: all 0.3s;
+  }
+
+  .sub-menu li {
+    height: 20px;
+    display: grid;
+  }
+}
 /* popup user end */
 /* header end */
 
@@ -382,10 +432,10 @@ header {
 .content {
   display: flex;
   width: 100%;
-  height: 50vh;
+  height: 90vh;
   margin: 70px auto;
   padding: 50px;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 
@@ -588,8 +638,8 @@ footer {
 }
 
 .footer-right div .footer-right-content .img-footer {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   margin-left: 20px;
 }
 

@@ -381,8 +381,8 @@ header {
 /* content start */
 .content-heading {
   width: 40%;
-  margin: 120px auto;
-  margin-bottom: -100px;
+  margin: 100px auto;
+  margin-bottom: -60px;
   padding-bottom: 10px;
   border-bottom: 1px solid;
 }
@@ -479,6 +479,10 @@ select {
 select:focus {
   background: url(../img/icon_dropdown_black180.png) 90% / 15% no-repeat;
   background-position: center right 10px;
+}
+
+#profile {
+  display: none;
 }
 
 #profile form button[type="reset"] {
@@ -644,7 +648,7 @@ select:focus {
   display: none;
 }
 
-#downloaded {
+#docs {
   display: none;
 }
 
@@ -807,8 +811,8 @@ footer {
 }
 
 .footer-right div .footer-right-content .img-footer {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   margin-left: 20px;
 }
 
